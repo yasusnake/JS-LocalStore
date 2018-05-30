@@ -2,8 +2,6 @@ mostrarDatos();
 
 function mostrarDatos() {
   let tbody = document.querySelector('#tbAlumnoData tbody');
-  let fila  = document.createElement('tr'),
-      celda = document.createElement('td');
 
   tbody.innerHTML = '';
 
@@ -21,6 +19,4 @@ function mostrarDatos() {
           tbody.appendChild(fila);
     }
   }
-
-  console.log(obtenerDatos);
 }

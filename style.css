@@ -1,9 +1,9 @@
 body {
   background: #ccc;
 }
-.container {
+/* .container {
   max-width: 1000px;
-}
+} */
 #mainContainer {
   background: #fff;
   height: 100vh;
