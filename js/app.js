@@ -1,5 +1,4 @@
-let arrayAlumno = [],
-    botonRegistro = document.querySelector('#enviarRegistro');
+let arrayAlumno = [];
 
 if(localStorage.getItem('datos_alumnos') != null) {
   arrayAlumno = JSON.parse( localStorage.getItem('datos_alumnos') );
@@ -24,6 +23,13 @@ function guardarRegistro() {
   arrayAlumno.push(Object.values(datosAlumno));
 
   localStorage.setItem('datos_alumnos', JSON.stringify(arrayAlumno));
+
+  swal({
+    title: "Registro Guardado!",
+    text: "La información rellenada en el formulario fue guardada exitosamente",
+    icon: "success",
+    button: "Ok",
+  });
 }
 
 function mostrarDatos() {
