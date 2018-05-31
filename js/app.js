@@ -19,9 +19,17 @@ function guardarRegistro() {
     otra_sennas      : document.getElementById('otros').value,
   }
 
-  arrayAlumno.push(Object.values(datosAlumno));
+  if(datosAlumno.nombre === '' || datosAlumno.apellido1 === '' || datosAlumno.apellido2 === '' || datosAlumno.fecha_nacimiento === '' || datosAlumno.email === '' || datosAlumno.telefono === '' || datosAlumno.provincia === '' || datosAlumno.canton === '' || datosAlumno.distrito === '' || datosAlumno.barrio === '' || datosAlumno.otra_sennas === '') {
+    swal("Por favor rellene todos los datos");
+  } else {
+    arrayAlumno.push(Object.values(datosAlumno));
 
-  localStorage.setItem('datos_alumnos', JSON.stringify(arrayAlumno));
+    localStorage.setItem('datos_alumnos', JSON.stringify(arrayAlumno));
+
+    document.forms['datosAlumnos'].reset();
+
+    swal("Datos Guardados!", "Puedes seguir agregando datos", "success");
+  }  
 }
 
 function mostrarDatos() {
