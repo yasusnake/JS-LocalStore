@@ -6,17 +6,17 @@ if(localStorage.getItem('datos_alumnos') != null) {
 
 function guardarRegistro() {
   let datosAlumno = {
-    nombre           : document.querySelector('#nombre').value,
-    apellido1        : document.querySelector('#apellido1').value,
-    apellido2        : document.querySelector('#apellido2').value,
-    fecha_nacimiento : document.querySelector('#nacimiento').value,
-    email            : document.querySelector('#email').value,
-    telefono         : document.querySelector('#telefono').value,
-    provincia        : document.querySelector('#provincia').value,
-    canton           : document.querySelector('#canton').value,
-    distrito         : document.querySelector('#distrito').value,
-    barrio           : document.querySelector('#barrio').value,
-    otra_sennas      : document.querySelector('#otros').value,
+    nombre           : document.getElementById('nombre').value,
+    apellido1        : document.getElementById('apellido1').value,
+    apellido2        : document.getElementById('apellido2').value,
+    fecha_nacimiento : document.getElementById('nacimiento').value,
+    email            : document.getElementById('email').value,
+    telefono         : document.getElementById('telefono').value,
+    provincia        : document.getElementById('provincia').value,
+    canton           : document.getElementById('canton').value,
+    distrito         : document.getElementById('distrito').value,
+    barrio           : document.getElementById('barrio').value,
+    otra_sennas      : document.getElementById('otros').value,
   }
 
   arrayAlumno.push(Object.values(datosAlumno));
@@ -34,7 +34,7 @@ function mostrarDatos() {
     for(let j in array) {
       let celda = document.createElement('td'),
           texto = document.createTextNode(array[j]);
-      
+
           celda.appendChild(texto);
           fila.appendChild(celda);
           tbody.appendChild(fila);

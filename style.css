@@ -6,7 +6,8 @@ body {
 } */
 #mainContainer {
   background: #fff;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   padding-top: 15px;
   padding-bottom: 15px;
 }
